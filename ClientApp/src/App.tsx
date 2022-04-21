@@ -19,7 +19,7 @@ async function populateWeatherData() {
 }
 
 async function writeSheetData(sheet: Excel.Worksheet, data: any[]) {
-  console.log(data);
+
   const titleCell = sheet.getCell(0, 0);
   titleCell.values = [["Weather Report"]];
   titleCell.format.font.name = "Century";
@@ -34,7 +34,7 @@ async function writeSheetData(sheet: Excel.Worksheet, data: any[]) {
   headerRow.getRow(0).format.font.bold = true;
 
   const dataRange = headerRow.getOffsetRange(1, 0).getResizedRange(data.length - 1, 0);
-  dataRange.values = data;
+  dataRange.values = [data];
 
   titleCell.getResizedRange(0, headerNames.length - 1).merge();
   dataRange.format.autofitColumns();
