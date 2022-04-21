@@ -3,7 +3,7 @@ import { Button } from 'reactstrap';
 
 const App = () => {
   return (<div>
-    <Button onClick={async () => {
+    <Button style={{ margin: 20 }} onClick={async () => {
       await Excel.run(async (context) => {
         await populateWeatherData().then(data => writeSheetData(context.workbook.worksheets.getActiveWorksheet(), data));
       })
@@ -15,7 +15,6 @@ const App = () => {
 async function populateWeatherData() {
   const response = await fetch('weatherforecast');
   const data = await response.json();
-  console.log(data);
 
   return Array.from(data, (item: any) => {
     return [item.date, item.temperatureC, item.temperatureF, item.summary]
@@ -23,17 +22,13 @@ async function populateWeatherData() {
 }
 
 async function writeSheetData(sheet: Excel.Worksheet, data: any[]) {
-  console.log(data);
 
   const titleCell = sheet.getCell(0, 0);
   titleCell.values = [["Weather Report"]];
   titleCell.format.font.name = "Century";
   titleCell.format.font.size = 26;
-  // Create an array containing sample data
   const headerNames = ["Date", "TemperatureC", "TemperatureF", "Summary"];
 
-  // Write the sample data to the specified range in the worksheet
-  // and bold the header row
   const headerRow = titleCell.getOffsetRange(1, 0).getResizedRange(0, headerNames.length - 1);
   headerRow.values = [headerNames];
   headerRow.getRow(0).format.font.bold = true;
