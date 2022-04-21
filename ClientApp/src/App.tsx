@@ -15,6 +15,8 @@ const App = () => {
 async function populateWeatherData() {
   const response = await fetch('weatherforecast');
   const data = await response.json();
+  console.log(data);
+
   return Array.from(data, (item: any) => {
     return [item.Date, item.TemperatureC, item.TemperatureF, item.Summary]
   });
