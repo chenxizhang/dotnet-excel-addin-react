@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'reactstrap';
 
-export default () => {
+const App = () => {
   return (<div>
     <Button onClick={async () => {
       await Excel.run(async (context) => {
@@ -40,3 +40,5 @@ async function writeSheetData(sheet: Excel.Worksheet, data: any[]) {
 
   await sheet.context.sync();
 }
+
+export default App;
