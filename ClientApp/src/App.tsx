@@ -19,6 +19,7 @@ async function populateWeatherData() {
 }
 
 async function writeSheetData(sheet: Excel.Worksheet, data: any[]) {
+  console.log(data);
   const titleCell = sheet.getCell(0, 0);
   titleCell.values = [["Weather Report"]];
   titleCell.format.font.name = "Century";
