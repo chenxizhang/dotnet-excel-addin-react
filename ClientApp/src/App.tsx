@@ -15,10 +15,13 @@ const App = () => {
 async function populateWeatherData() {
   const response = await fetch('weatherforecast');
   const data = await response.json();
-  return data;
+  return Array.from(data, (item: any) => {
+    return [item.Date, item.TemperatureC, item.TemperatureF, item.Summary]
+  });
 }
 
 async function writeSheetData(sheet: Excel.Worksheet, data: any[]) {
+  console.log(data);
 
   const titleCell = sheet.getCell(0, 0);
   titleCell.values = [["Weather Report"]];
