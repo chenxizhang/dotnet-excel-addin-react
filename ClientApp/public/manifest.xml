@@ -20,7 +20,7 @@
   <DisplayName DefaultValue="ExcelWebAddInSample" />
   <Description DefaultValue="ExcelWebAddInSample"/>
   <!-- Icon for your add-in. Used on installation screens and the add-ins dialog. -->
-  <IconUrl DefaultValue="https://addindemo111.azurewebsites.net/Images/Button32x32.png" />
+  <IconUrl DefaultValue="https://localhost:5444/Images/Button32x32.png" />
 
   <SupportUrl DefaultValue="http://www.contoso.com" />
   <!-- Domains that will be allowed when navigating. For example, if you use ShowTaskpane and then have an href link, navigation will only be allowed if the domain is on this list. -->
@@ -36,7 +36,7 @@
     <Host Name="Workbook" />
   </Hosts>
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://addindemo111.azurewebsites.net/index.html" />
+    <SourceLocation DefaultValue="https://localhost:5444/index.html" />
   </DefaultSettings>
   <!-- End TaskPane Mode integration.  -->
 
@@ -115,13 +115,13 @@
     <!-- You can use resources across hosts and form factors. -->
     <Resources>
       <bt:Images>
-        <bt:Image id="Contoso.tpicon_16x16" DefaultValue="https://addindemo111.azurewebsites.net/Images/Button16x16.png" />
-        <bt:Image id="Contoso.tpicon_32x32" DefaultValue="https://addindemo111.azurewebsites.net/Images/Button32x32.png" />
-        <bt:Image id="Contoso.tpicon_80x80" DefaultValue="https://addindemo111.azurewebsites.net/Images/Button80x80.png" />
+        <bt:Image id="Contoso.tpicon_16x16" DefaultValue="https://localhost:5444/Images/Button16x16.png" />
+        <bt:Image id="Contoso.tpicon_32x32" DefaultValue="https://localhost:5444/Images/Button32x32.png" />
+        <bt:Image id="Contoso.tpicon_80x80" DefaultValue="https://localhost:5444/Images/Button80x80.png" />
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="Contoso.DesktopFunctionFile.Url" DefaultValue="https://addindemo111.azurewebsites.net/Functions/FunctionFile.html" />
-        <bt:Url id="Contoso.Taskpane.Url" DefaultValue="https://addindemo111.azurewebsites.net/index.html" />
+        <bt:Url id="Contoso.DesktopFunctionFile.Url" DefaultValue="https://localhost:5444/Functions/FunctionFile.html" />
+        <bt:Url id="Contoso.Taskpane.Url" DefaultValue="https://localhost:5444/index.html" />
         <bt:Url id="Contoso.GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812" />
       </bt:Urls>
       <!-- ShortStrings max characters==125. -->

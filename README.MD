@@ -7,7 +7,11 @@
 
 ## 如何使用
 
-1. 下载清单文件 <https://addindemo111.azurewebsites.net/manifest.xml> 
+1. 下载 [清单文件](./ClientApp/public/manifest.xml) 
+1. 克隆这份代码 `git clone https://github.com/chenxizhang/dotnet-excel-addin-react.git`， 然后切换到该项目目录，运行 `dotnet run --Urls https://localhost:5444`
+    
+    如果遇到证书错误的提示，则运行 `dotnet dev-certs https -t` 安装本地证书
+
 1. 按照 <https://docs.microsoft.com/en-us/office/dev/add-ins/testing/sideload-office-add-ins-for-testing> 的说明在Excel Online中进行测试
 1. 点击 "插入数据" 按钮，你可以看到下面的效果
     ![](example.png)
