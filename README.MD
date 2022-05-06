@@ -8,7 +8,7 @@
 ## 如何使用
 
 1. 下载 [清单文件](./ClientApp/public/manifest.xml) 
-1. 克隆这份代码 `git clone https://github.com/chenxizhang/dotnet-excel-addin-react.git`， 然后切换到该项目目录，运行 `dotnet run --Urls https://localhost:5444`
+1. 克隆这份代码 `git clone https://github.com/chenxizhang/dotnet-excel-addin-react.git`， 然后切换到该项目目录，运行 `dotnet run`
     
     如果遇到证书错误的提示，则运行 `dotnet dev-certs https -t` 安装本地证书
 
